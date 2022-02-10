@@ -1,3 +1,4 @@
+from email.mime import application
 from flask import Flask, app
 from flask_sqlalchemy import SQLAlchemy
 from os import path
@@ -5,7 +6,7 @@ from flask_login import LoginManager
 
 db = SQLAlchemy()
 DB_NAME = "database.db"
-
+app = application
 
 def create_app():
     app = Flask(__name__)
